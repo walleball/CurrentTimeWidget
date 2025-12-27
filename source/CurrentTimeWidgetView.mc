@@ -37,17 +37,17 @@ class CurrentTimeWidgetGlanceView extends WatchUi.GlanceView {
         ]);
         
         // Clear the screen
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        dc.clear();
+        // dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        // dc.clear();
         
         // Draw the time
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
-            dc.getWidth() / 2,
+            0, // dc.getWidth() / 2,
             dc.getHeight() / 2,
-            Graphics.FONT_MEDIUM,
+            Graphics.FONT_LARGE,
             timeString,
-            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
+            Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER
         );
     }
 
@@ -107,7 +107,7 @@ class CurrentTimeWidgetView extends WatchUi.View {
         dc.drawText(
             width / 2,
             height / 2,
-            Graphics.FONT_LARGE,
+            Graphics.FONT_SYSTEM_NUMBER_HOT,
             timeString,
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
         );
