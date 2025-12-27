@@ -2,7 +2,7 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
 
-class CurrentTimeWidgetApp extends Application.AppBase {
+class CurrentTimeApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
@@ -18,16 +18,16 @@ class CurrentTimeWidgetApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new CurrentTimeWidgetView() ];
+        return [ new CurrentTimeView() ];
     }
 
     // Return the glance view for the widget loop
     function getGlanceView() as [GlanceView] or [GlanceView, GlanceViewDelegate] or Null {
-        return [ new CurrentTimeWidgetGlanceView() ];
+        return [ new CurrentTimeGlanceView() ];
     }
 
 }
 
-function getApp() as CurrentTimeWidgetApp {
-    return Application.getApp() as CurrentTimeWidgetApp;
+function getApp() as CurrentTimeApp {
+    return Application.getApp() as CurrentTimeApp;
 }

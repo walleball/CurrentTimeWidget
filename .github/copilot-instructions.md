@@ -8,11 +8,11 @@ This is a **Garmin Connect IQ widget** written in **MonkeyC**, targeting the viv
 
 ### Core Components
 
--  **[source/CurrentTimeWidgetApp.mc](../source/CurrentTimeWidgetApp.mc)**: Application entry point extending `Application.AppBase`
+-  **[source/CurrentTimeApp.mc](../source/CurrentTimeApp.mc)**: Application entry point extending `Application.AppBase`
    -  `initialize()`: App initialization
    -  `getInitialView()`: Returns the widget's view
    -  `onStart()/onStop()`: Lifecycle hooks for state management
--  **[source/CurrentTimeWidgetView.mc](../source/CurrentTimeWidgetView.mc)**: UI layer extending `WatchUi.View`
+-  **[source/CurrentTimeView.mc](../source/CurrentTimeView.mc)**: UI layer extending `WatchUi.View`
    -  `onLayout(dc)`: Load XML layouts via `Rez.Layouts.MainLayout(dc)`
    -  `onUpdate(dc)`: Render updates (must call `View.onUpdate(dc)` first)
    -  `onShow()/onHide()`: View lifecycle for resource management
@@ -63,7 +63,7 @@ Use the Garmin Connect IQ simulator or device for testing. Access via VS Code's 
 -  Always call parent methods first in overrides: `View.onUpdate(dc)` before custom drawing
 -  Use `dc` (DeviceContext) for all graphics operations
 -  Resource IDs use snake_case: `id_monkey`
--  Class names use PascalCase: `CurrentTimeWidgetView`
+-  Class names use PascalCase: `CurrentTimeView`
 
 ## Key Constraints
 
@@ -75,7 +75,7 @@ Use the Garmin Connect IQ simulator or device for testing. Access via VS Code's 
 ## Adding New Features
 
 1. Update resources in `resources/` (layouts, strings, drawables)
-2. Modify view logic in `CurrentTimeWidgetView.mc` (drawing, updates)
-3. Add app-level logic in `CurrentTimeWidgetApp.mc` (state, lifecycle)
+2. Modify view logic in `CurrentTimeView.mc` (drawing, updates)
+3. Add app-level logic in `CurrentTimeApp.mc` (state, lifecycle)
 4. Use VS Code commands (not manual edits) for manifest changes
 5. Test on simulator before deploying to device

@@ -5,7 +5,7 @@ import Toybox.Lang;
 import Toybox.Timer;
 
 (:glance)
-class CurrentTimeWidgetGlanceView extends WatchUi.GlanceView {
+class CurrentTimeGlanceView extends WatchUi.GlanceView {
 
     private var _timer as Timer.Timer?;
 
@@ -54,7 +54,7 @@ class CurrentTimeWidgetGlanceView extends WatchUi.GlanceView {
 
 }
 
-class CurrentTimeWidgetView extends WatchUi.View {
+class CurrentTimeView extends WatchUi.View {
 
     private var _timer as Timer.Timer?;
 
